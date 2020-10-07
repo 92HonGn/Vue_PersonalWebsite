@@ -1,0 +1,23 @@
+// mixin
+@mixin size ($w, $h:$w) {
+  width: $w;
+  height: $h;
+}
+@mixin menu-hb-animation {
+  animation-duration: 800ms;
+  animation-play-state: running;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all .25s .25s;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin bg-cover {
+  background-size: cover;
+  background-position:  center center;
+  background-repeat: no-repeat;
+}

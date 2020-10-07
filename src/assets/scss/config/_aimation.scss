@@ -1,0 +1,77 @@
+@keyframes danceHeight1 {
+  from {
+      width: 15px;
+  }
+
+  to {
+      width: 35px;
+  }
+}
+
+@keyframes danceHeight2 {
+  from {
+      width: 15px;
+  }
+
+  to {
+      width: 35px;
+  }
+}
+
+@keyframes danceHeight3 {
+  from {
+      width: 15px;
+  }
+
+  to {
+      width: 35px;
+  }
+}
+
+@keyframes active-menu-bar01 {
+  0% {
+      transform: translateY(0) rotate(0);
+  }
+
+  50% {
+      transform: translateY(10px) rotate(0);
+  }
+
+  100% {
+      transform: translateY(10px) rotate(45deg);
+  }
+}
+
+@keyframes active-menu-bar03 {
+  0% {
+      transform: translateY(0) rotate(0);
+  }
+
+  50% {
+      transform: translateY(-10px) rotate(0);
+  }
+
+  100% {
+      transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+@keyframes ball {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

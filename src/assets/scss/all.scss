@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import './layout/reset';
+
+@import './helpers/variable';
+
+@import './config/mixins';
+
+@import './helpers/common';
+
+@import './config/aimation';
+
+@import './element/button';
+
+@import './layout/Navbar';
+
+@import './layout/Footer';
+
+@import './pages/index';
+
+@import './pages/about';
+
+@import './pages/fans';
+
+@import './pages/album';
+
+@import './pages/news';
+
+@import './pages/live';
+
+@import './pages/goods';

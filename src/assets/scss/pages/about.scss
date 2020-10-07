@@ -1,0 +1,170 @@
+.about{
+  &-title{
+    padding: 20px 0 10px;
+    h2{
+      font-size: 30px;
+    }
+  }
+  &-slider{
+    height: 50vh;
+    position: relative;
+    .item{
+      position: relative;
+      height: 100%;
+      .intro{
+        position: absolute;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        width: 90%;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      p{
+        font-size: 14px;
+        text-align: left;
+        line-height: 22px;
+        letter-spacing: 1px;
+        color:#000;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &-singer{
+    height: 50vh;
+    position: relative;
+    .singer-content{
+      position: absolute;
+      z-index: 1;
+      background-color: rgba(2, 243, 255, 0.4);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      h2{
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      p{
+        text-align: left;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+    .singer-picture{
+      background-image: url(../../assets/images/aboutsinger.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &-singerlife{
+    position: relative;
+    height: 60vh;
+    .singerlife-container{
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      height: 100%;
+    }
+    .singerlife-timeline{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100%;
+      width: 93px;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50px;
+        background-color: #000;
+        width: 2px;
+        height: 380px;
+        left: 28%;
+        z-index: -1;
+      }
+      .circle{
+        margin-top: 50%;
+        margin-bottom: 50%;
+        margin-left: 10%;
+      }
+      .year-point{
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 2px solid #000;
+        background-color: #fff;
+        margin-right: 10px;
+      }
+      .year-mark{
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: bold;
+      }
+    }
+    .singerlife-photo{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, transparent 0%, rgba(253, 250, 1, 0.2) 100%), url(../../assets/images/singerlife.jpg);
+      background-position: 100% 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    .singerlife-intro{
+      background-color: rgba(255, 251, 0, 0.67);
+      width: 69%;
+      height: 86%;
+      position: absolute;
+      right: 0px;
+      top: 0%;
+      bottom: 0;
+      left: 80px;
+      margin: auto;
+      h2{
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+        color: #000;
+        position: relative;
+      }
+      p{
+        text-align: left;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        color: #000;
+      }
+    }
+  }
+}

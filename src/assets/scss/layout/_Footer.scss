@@ -1,0 +1,73 @@
+footer {
+  background-image: url(../images/960mywebsite_02.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 100%;
+  padding: 30px 0;
+  .container{
+
+  }
+  .media-social{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .media-link{
+    a:nth-of-type(1){
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url(../images/twitter.png);
+      background-position: center;
+      background-size: contain;
+      margin-right: 20px;
+    }
+    a:nth-of-type(2) {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url(../images/youtube.png);
+      background-position: center;
+      background-size: contain;
+      margin-right: 20px;
+    }
+    a:nth-of-type(3) {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url(../images/line-me.png);
+      background-position: center;
+      background-size: contain;
+      margin-right: 20px;
+    }
+    a:nth-of-type(4) {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url(../images/gp+.png);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  .copyright{
+    padding-bottom: 10px;
+    text-align: center;
+    color: #666666;
+    font-size: 12px;
+  }
+  .go-top{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-image: url(../images/up-chevron-button.png);
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 20;
+  }
+}
