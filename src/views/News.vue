@@ -8,8 +8,8 @@
     </div>
 
     <div class="news-selected">
-      <div class="selected-container ">
-        <div class="filter ">
+      <div class="selected-container">
+        <div class="desk-filter">
           <select>
             <option value="All ">All</option>
             <option value="Live ">Live</option>
@@ -20,9 +20,9 @@
           <div class="select__arrow "></div>
         </div>
 
-        <div class="filter2 ">
+        <div class="phone-filter">
           <ul>
-            <li class="active ">All</li>
+            <li class="active">All</li>
             <li>Live</li>
             <li>Ablum</li>
             <li>Single</li>
@@ -34,108 +34,82 @@
 
     <div class="news-content">
       <div class="content-container">
-        <div class="info">
+        <div class="info"
+             v-for="item in newsList"
+             :key="item.newsid">
           <div class="col12">
-            <img src="image/news0905.png"
-                 alt="new1 ">
+            <img :src="item.newspic"
+                 :alt="'NEWS'+item.newsid">
           </div>
           <div class="col12">
-            <div class="new-mark ">NEWS</div>
-            <span class="date ">2018.08.03</span>
-            <h2>Aimer第15屆單曲 "Black Bird / Tiny Dancers / Memories are pretty " CD購買者福利決定！</h2>
-            <p>它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty "。</p>
-          </div>
-        </div>
-
-        <div class="info">
-          <div class="col12">
-            <img src="img/news06.png "
-                 alt="new1 ">
-          </div>
-          <div class="col12">
-            <div class="new-mark ">NEWS</div>
-            <span class="date ">2018.08.03</span>
-            <h2>Aimer第15屆單曲 "Black Bird / Tiny Dancers / Memories are pretty " CD購買者福利決定！</h2>
-            <p>它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty "。</p>
-          </div>
-        </div>
-
-        <div class="info">
-          <div class="col12">
-            <img src="img/news11.png "
-                 alt="new1 ">
-          </div>
-          <div class="col12">
-            <div class="new-mark ">NEWS</div>
-            <span class="date ">2018.08.03</span>
-            <h2>Aimer第15屆單曲 "Black Bird / Tiny Dancers / Memories are pretty " CD購買者福利決定！</h2>
-            <p>它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty "。</p>
-          </div>
-        </div>
-
-        <div class="info">
-          <div class="col12">
-            <img src="img/Aimer_sticker120mm.png "
-                 alt="new1 ">
-          </div>
-          <div class="col12">
-            <div class="new-mark ">NEWS</div>
-            <span class="date ">2018.08.03</span>
-            <h2>Aimer第15屆單曲 "Black Bird / Tiny Dancers / Memories are pretty " CD購買者福利決定！</h2>
-            <p>它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty "。</p>
-          </div>
-        </div>
-
-        <div class="info">
-          <div class="col12">
-            <img src="img/news02.jpg "
-                 alt="new1 ">
-          </div>
-          <div class="col12">
-            <div class="new-mark ">NEWS</div>
-            <span class="date ">2018.08.03</span>
-            <h2>Aimer第15屆單曲 "Black Bird / Tiny Dancers / Memories are pretty " CD購買者福利決定！</h2>
-            <p>它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty "。</p>
-          </div>
-        </div>
-
-        <div class="info">
-          <div class="col12">
-            <img src="img/news03.jpg "
-                 alt="new1 ">
-          </div>
-          <div class="col12">
-            <div class="new-mark ">NEWS</div>
-            <span class="date ">2018.08.03</span>
-            <h2>Aimer第15屆單曲 "Black Bird / Tiny Dancers / Memories are pretty " CD購買者福利決定！</h2>
-            <p>它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty "。</p>
-          </div>
-        </div>
-
-        <div class="info">
-          <div class="col12">
-            <img src="img/ab00.jpg "
-                 alt="new1 ">
-          </div>
-          <div class="col12">
-            <div class="new-mark ">NEWS</div>
-            <span class="date ">2018.08.03</span>
-            <h2>Aimer第15屆單曲 "Black Bird / Tiny Dancers / Memories are pretty " CD購買者福利決定！</h2>
-            <p>它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty "。</p>
+            <div class="mark">
+              <div class="new-mark">
+              NEWS
+              </div>
+              <span class="date">
+                {{item.newsdate}}
+              </span>
+            </div>
+            <h2>
+              {{item.newstitle}}
+            </h2>
+            <p>
+              {{item.newscontent}}
+            </p>
           </div>
         </div>
 
       </div>
     </div>
-    
+
   </div>
 </template>
 
 <script>
+  import news1 from "../assets/images/news01.png";
+  import news2 from "../assets/images/news02.png";
+  import news3 from "../assets/images/news03.png";
+  import news4 from "../assets/images/news04.png";
+
   export default {
     name: "news",
     data() {
-      return {};
+      return {
+        newsList: [
+          {
+            newsid: 1,
+            newspic: news1,
+            newsdate: "2021.10.16",
+            newstitle: "Aimer第15屆單曲",
+            newscontent:
+              '它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty"CD購買者福利決定！',
+          },
+          {
+            newsid: 2,
+            newspic: news2,
+            newsdate: "2021.10.17",
+            newstitle: "Aimer第16屆單曲",
+            newscontent:
+              '它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty"CD購買者福利決定！',
+          },
+          {
+            newsid: 3,
+            newspic: news3,
+            newsdate: "2021.10.18",
+            newstitle: "Aimer第17屆單曲",
+            newscontent:
+              '它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty"CD購買者福利決定！',
+          },
+          {
+            newsid: 4,
+            newspic: news4,
+            newsdate: "2021.10.19",
+            newstitle: "Aimer第18屆單曲",
+            newscontent:
+              '它將於9月5日發布Aimer 15th單曲"Black Bird / Tiny Dancers / memory are pretty"CD購買者福利決定！',
+          },
+        ],
+      };
     },
     components: {},
     methods: {},
