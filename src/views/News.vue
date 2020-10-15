@@ -22,11 +22,26 @@
 
         <div class="phone-filter">
           <ul>
-            <li class="active">All</li>
-            <li>Live</li>
-            <li>Ablum</li>
-            <li>Single</li>
-            <li>News</li>
+            <li class="active">
+              <a href="javascript::"></a>
+              All
+            </li>
+            <li>
+              <a href="javascript::"></a>
+              Live
+            </li>
+            <li>
+              <a href="javascript::"></a>
+              Ablum
+            </li>
+            <li>
+              <a href="javascript::"></a>
+              Single
+            </li>
+            <li>
+              <a href="javascript::"></a>
+              News
+            </li>
           </ul>
         </div>
       </div>
