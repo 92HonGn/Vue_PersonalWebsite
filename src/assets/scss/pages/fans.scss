@@ -1,0 +1,102 @@
+.fans{
+  background-color: #f7f7f7;
+  &-title{
+    padding: 20px 0 10px;
+    h2{
+      font-size: 30px;
+    }
+  }
+  &-front{
+    background: #000;
+    color: #fff;
+    .front-container{
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+    .box{
+      h2{
+        font-size: 25px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+      h3{
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      p{
+        line-height: 1.5;
+        padding-bottom: 10px;
+        text-align: left;
+        letter-spacing: 1px;
+      }
+    }
+    .clubpic{
+      width: 100%;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+  }
+  &-join{
+    .join-container{
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+    p{
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    .qr{
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      & + a {
+        color: #000;
+        text-decoration: none;
+        vertical-align: middle;
+      }
+    }
+  }
+  &-intro{
+    .intro-container{
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+    .intro-active{
+      display: flex;
+      flex-wrap: wrap;
+      .col6{
+        border: 1px solid #000;
+        margin-bottom: 10px;
+        flex: 1 1 calc(50% - 10px);
+      }
+      .col6:nth-child(2n+1){
+        margin-right: 10px;
+        box-sizing: border-box;
+      }
+    }
+    .sub-content{
+      h3{
+        margin-bottom: 10px;
+      }
+      p{
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+    }
+  }
+  &-copyright{
+    padding-bottom: 10px;
+    text-align: center;
+    color: #666666;
+    font-size: 12px;
+  }
+
+}

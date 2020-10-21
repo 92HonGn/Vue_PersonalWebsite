@@ -23,9 +23,9 @@ const routes = [
     component: About
   },
   {
-    path: '/fans',
-    name: 'fans',
-    component: Fans
+    path: '/news',
+    name: 'news',
+    component: News
   },
   {
     path: '/album',
@@ -33,9 +33,9 @@ const routes = [
     component: Album
   },
   {
-    path: '/news',
-    name: 'news',
-    component: News
+    path: '/fans',
+    name: 'fans',
+    component: Fans
   },
   {
     path: '/live',
