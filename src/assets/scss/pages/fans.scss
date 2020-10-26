@@ -1,11 +1,14 @@
 .fans{
+
   background-color: #f7f7f7;
+
   &-title{
     padding: 20px 0 10px;
     h2{
       font-size: 30px;
     }
   }
+
   &-front{
     background: #000;
     color: #fff;
@@ -40,6 +43,7 @@
       display: inline-block;
     }
   }
+
   &-join{
     .join-container{
       max-width: 1200px;
@@ -62,6 +66,7 @@
       }
     }
   }
+
   &-intro{
     .intro-container{
       max-width: 1200px;
@@ -92,6 +97,7 @@
       }
     }
   }
+  
   &-copyright{
     padding-bottom: 10px;
     text-align: center;

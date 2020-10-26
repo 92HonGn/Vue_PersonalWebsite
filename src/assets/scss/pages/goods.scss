@@ -1,12 +1,89 @@
 .goods{
   &-title{
-    
+    padding: 20px 0 10px;
+    h2{
+      font-size: 30px;
+    }
   }
   &-shop{
-    
+    margin-bottom: 15px;
+    .shop-container{
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 10px;
+      position: relative;
+    }
+    .cover-hover{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 10px;
+      left: 10px;
+      z-index: 1;
+    }
+    p{
+      display: block;
+      box-sizing: border-box;
+      height: 50px;
+      border: 2px solid #000;
+      line-height: 48px;
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 20px;
+      color: #000;
+      transition: all 2s;
+      overflow: hidden;
+      position: relative;
+    }
+    .cover-hover:hover + p{
+      color: #fff;
+      &:before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 90%;
+        height: 200px;
+        background-color: #000;
+        border-radius: 80px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: waterFloat 5s infinite linear;
+        transition: all 2s;
+        z-index: -1;
+      }
+    }
   }
   &-banner{
-
+    height: 50vh;
+    background-image: url(../images/goodsBanner.png);
+    background-repeat: no-repeat;
+    background-position: 90%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 15px;
+    .banner-content{
+      background-color: rgba(255, 2555, 255, 0.7);
+      width: 300px;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 10px;
+      h2{
+        font-size: 20px;
+        color: #000;
+        font-weight: 550;
+        line-height: 32px;
+      }
+      p{
+        font-size: 16px;
+        color: #000;
+        line-height: 22px;
+        text-align: left;
+      }
+    }
   }
   &-new{
 

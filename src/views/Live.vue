@@ -31,10 +31,12 @@
 
         <div class="information-cate">
           <ul class="main-menu">
-            <li class="main">
+
+            <li class="main active">
               <a href="javascript::"></a>
               全部演唱會
             </li>
+
             <li class="main">
               <a href="javascript::"></a>
               依地區
@@ -46,6 +48,7 @@
                 </li>
               </ul>
             </li>
+
             <li class="main">
               <a href="javascript::"></a>
               依年月
@@ -57,42 +60,54 @@
                 </li>
               </ul>
             </li>
+
           </ul>
         </div>
 
         <div class="information-times">
           <h3>Aimer Hall Tour 18/19 "soleil et pluie"</h3>
           <ul>
+
             <li>
-              <h4>門票價格 指定座位\7,000(含稅)：</h4>
-              <p>※6歲及以上的學齡前兒童不能進入</p>
-              <p>※每份申請最多4份（但最多2份千葉·埼玉·東京表演</p>
-              <p>※多種表演</p>
+              <h4>門票價格 指定座位\7,000(含稅)</h4>
+
+              <p><span>※</span>6歲及以上的學齡前兒童不能進入</p>
+              <p><span>※</span>每份申請最多4份（但最多2份千葉·埼玉·東京表演</p>
+              <p><span>※</span>多種表演</p>
+
             </li>
+
             <li>
-              <h4>一般發布日期：</h4>
-              <p>※2018年表演2018/10/06（星期六）〜</p>
-              <p>※演出於2019年11月3日（週六）舉行〜</p>
+              <h4>一般發布日期</h4>
+
+              <p><span>※</span>2018年表演2018/10/06（星期六）〜</p>
+              <p><span>※</span>演出於2019年11月3日（週六）舉行〜</p>
+
             </li>
+
             <li>
-              <h4>購票最新消息：</h4>
+              <h4>購票最新消息</h4>
+
               <div class="box1">
-                <p>※Aimer移動粉絲俱樂部“Blanc et Noir”第二次初步接待</p>
-                <p class="subtitle">※受理期間</p>
+                <p><span>※</span>Aimer移動粉絲俱樂部“Blanc et Noir”第二次初步接待</p>
+                <p class="subtitle"><span>※</span>受理期間</p>
                 <p>2018年9月4日（星期二），2018年9月10日（星期一）中午23:00</p>
-                <p class="subtitle">※購票連結
+                <p class="subtitle"><span>※</span>購票連結
                 </p>
                 <p>
                   <a class="urltick"
                      href="#">http://k.aimer-web.jp/tour1819_ticket/</a>
                 </p>
               </div>
+
               <div class="box2">
-                <p>※Aimer第15單曲“Black Bird / Tiny Dancers / memory is beautiful”購買者限制優先接收</p>
-                <p class="subtitle">※接待時間</p>
+                <p><span>※</span>Aimer第15單曲“Black Bird / Tiny Dancers / memory is beautiful”購買者限制優先接收</p>
+                <p class="subtitle"><span>※</span>接待時間</p>
                 <p>2018年9月4日星期二至2018年9月10日星期一23:59</p>
               </div>
+
             </li>
+
           </ul>
         </div>
 
@@ -101,119 +116,56 @@
 
     <div class="live-place">
       <div class="place-container">
-        <h3>場地資訊</h3>
-        <div class="place1">
-          <div class="col12 colSM6 colMD6 colLG6 colXL6">
-            <img src="img/live00.JPG"
-                 alt="">
-            <p><a href="http://sunrisetokyo.com/">市川市文化会館</a></p>
+
+        <h4>場地資訊</h4>
+
+        <div v-for="item in liveLoactionLists"
+             :key="item.localid"
+             class="place">
+
+          <div class="col12">
+            <img :src="item.localpic"
+                 :alt="item.localart"
+                 class="place-pic">
+            <p class="place-art">
+                {{item.localart}}
+            </p>
+            <a :href="item.localinfo" class="cover"></a>
           </div>
-          <div class="pos col12 colSM6 colMD6 colLG6 colXL6">
-            <ul>
+
+          <div class="col12">
+            <ul class="place-detail">
               <li>
                 <p>公演日</p>
-                <span>2018.10.31(水)</span>
+                <span>{{item.localdate}}</span>
                 <a href="#"
                    class="googleCal"></a>
               </li>
               <li>
                 <p>地區</p>
-                <span>千葉県</span>
+                <span>{{item.localplace}}</span>
               </li>
               <li>
                 <p>會場</p>
-                <a href="#">市川市文化会館</a>
+                <a :href="item.localinfo">{{item.localart}}</a>
               </li>
               <li>
                 <p>開場/開演</p>
-                <span>17:30 / 18:30</span>
+                <span>{{item.localtime}}</span>
               </li>
               <li>
                 <p>連絡電話</p>
-                <span>0570-00-3337</span>
+                <span>{{item.localtel}}</span>
               </li>
               <li>
                 <p>場地資訊</p>
-                <a href="#">http://sunrisetokyo.com/</a>
+                <a :href="item.localinfo">{{item.localinfo}}</a>
               </li>
             </ul>
           </div>
+
         </div>
-        <div class="place2">
-          <div class="col12 colSM6 colMD6 colLG6 colXL6">
-            <img src="img/live01.jpg"
-                 alt="">
-            <p><a href="http://sunrisetokyo.com/">福岡サンパレスホテル&amp;ホール</a></p>
-          </div>
-          <div class="pos col12 colSM6 colMD6 colLG6 colXL6">
-            <ul>
-              <li>
-                <p>公演日</p>
-                <span>2018.11.03(土)</span>
-                <a href="#"
-                   class="googleCal"></a>
-              </li>
-              <li>
-                <p>地區</p>
-                <span>福岡県</span>
-              </li>
-              <li>
-                <p>會場</p>
-                <a href="#">福岡サンパレスホテル&amp;ホール</a>
-              </li>
-              <li>
-                <p>開場/開演</p>
-                <span>16:00 / 17:00</span>
-              </li>
-              <li>
-                <p>連絡電話</p>
-                <span>BEA</span>
-                <span>092-712-4221</span>
-              </li>
-              <li>
-                <p>場地資訊</p>
-                <a href="#">http://www.bea-net.com/</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="place3">
-          <div class="col12 colSM6 colMD6 colLG6 colXL6">
-            <img src="img/live03.JPG"
-                 alt="">
-            <p><a href="http://sunrisetokyo.com/">広島文化学園HBGホール</a></p>
-          </div>
-          <div class="pos col12 colSM6 colMD6 colLG6 colXL6">
-            <ul>
-              <li>
-                <p>公演日</p>
-                <span>2018.11.04(日)</span>
-                <a href="#"
-                   class="googleCal"></a>
-              </li>
-              <li>
-                <p>地區</p>
-                <span>広島県</span>
-              </li>
-              <li>
-                <p>會場</p>
-                <a href="#">広島文化学園HBGホール</a>
-              </li>
-              <li>
-                <p>開場/開演</p>
-                <span>16:00 / 17:00</span>
-              </li>
-              <li>
-                <p>連絡電話</p>
-                <span>082-249-3571</span>
-              </li>
-              <li>
-                <p>場地資訊</p>
-                <a href="#">www.yumebanchi.jp</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+
       </div>
     </div>
 
@@ -221,6 +173,10 @@
 </template>
 
 <script>
+  import live01 from "../assets/images/live01.png";
+  import live02 from "../assets/images/live02.png";
+  import live03 from "../assets/images/live03.png";
+
   export default {
     name: "live",
     data() {
@@ -276,6 +232,38 @@
           {
             dateid: 3,
             dateyear: "2022",
+          },
+        ],
+        liveLoactionLists: [
+          {
+            localid: 1,
+            localpic: live01,
+            localdate: "2021.10.31(水)",
+            localplace: "千葉県",
+            localart: "市川市文化会館",
+            localtime: "17:30 / 18:30",
+            localtel: "0570-00-3337",
+            localinfo: "http://sunrisetokyo.com/",
+          },
+          {
+            localid: 2,
+            localpic: live02,
+            localdate: "2021.11.03(土)",
+            localplace: "福岡県",
+            localart: "福岡サンパレスホテル&ホール",
+            localtime: "16:00 / 17:00",
+            localtel: "BEA 092-712-4221",
+            localinfo: "http://www.bea-net.com/",
+          },
+          {
+            localid: 3,
+            localpic: live03,
+            localdate: "2018.11.04(日)",
+            localplace: "広島県",
+            localart: "広島文化学園HBGホール",
+            localtime: "16:00 / 17:00",
+            localtel: "082-249-3571",
+            localinfo: "www.yumebanchi.jp",
           },
         ],
       };

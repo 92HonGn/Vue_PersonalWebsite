@@ -8,10 +8,14 @@
     </div>
 
     <div class="goods-shop">
-      <a href="javascript:"
-         class="cover-hover">
-      </a>
-      <p>{{goodsShop}}</p>
+      <div class="shop-container">
+        <a href="https://aimer-store.jp/"
+           target="_blank"
+           rel="noreferrer noopener"
+           class="cover-hover">
+        </a>
+        <p>{{goodsShop}}</p>
+      </div>
     </div>
 
     <div class="goods-banner">
