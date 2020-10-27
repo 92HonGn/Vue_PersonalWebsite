@@ -86,13 +86,82 @@
     }
   }
   &-new{
-
+    margin-bottom: 15px;
+    .col12{
+      padding: 0 10px;
+    }
+    h2{
+      font-size: 20px;
+      text-align: center;
+      line-height: 32px;
+    }
+    img{
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
   }
   &-intro{
-
+    margin-bottom: 15px;
+    h2{
+      font-size: 20px;
+      text-align: center;
+      line-height: 32px;
+    }
+    .intro{
+      display: flex;
+      flex-wrap: wrap;
+      .col6{
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      h3{
+        font-size: 16px;
+        font-weight: 550;
+        padding: 5px;
+      }
+      span{
+        font-size: 18px;
+        font-weight: 550;
+        padding: 5px;
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+    .pic{
+      display: inline-block;
+      // background-image: url(img/shop1.jpg);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background-position: 50% 50%;
+      position: relative;
+      overflow: hidden;
+      cursor: zoom-in;
+      img{
+        width: 100%;
+      }
+      .mark{
+        font-size: 16px;
+        background-color: #f00;
+        width: 36%;
+        padding: 1px;
+        text-align: center;
+        line-height: 25px;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
   }
   &-recommend{
-
+    h2{
+      font-size: 20px;
+      text-align: center;
+      line-height: 32px;
+      margin-bottom: 5px;
+    }
   }
   &-shoppath{
 
