@@ -83,7 +83,7 @@
       </h2>
       <div class="shoppath">
 
-        <div class="col6"
+        <div class="col12"
              v-for="item in goodShoppathLists"
              :key="item.pathid">
           <div class="path">
